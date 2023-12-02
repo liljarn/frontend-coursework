@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChocShock</title>
+        <link rel="icon" type="image/png" href="icons/logo_mini.png">
+        <script src="https://kit.fontawesome.com/be9639af8e.js" crossorigin="anonymous"></script>
+        <script src="menu.js" defer></script>
+        <script type="module" src="/profile.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="loginForm" class="popup">
+            <div class="floating-cookies">
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco1.png"></div>
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco1.png"></div>
+            </div>
+            <form class="login-form">
+                <h1>ВХОД</h1>
+                <input type="email" placeholder="Почта💌" id="email" name="email" required>
+                <input type="password" placeholder="Пароль🤫" id="password" name="password" required>
+                <a href="profile.html" id="login-button">ВОЙТИ</a>
+                <a href="profile.html" id="registration-button">Ещё нет аккаунта</a>
+            </form>
+            <button id="closeLoginFormButton">Закрыть</button>
+        </div>
+        <header>
+            <div class="center-menu">
+                <h1 id="title">ChocShock</h1>
+                <div class="logo">
+                    <img src="icons/logo.png" style="max-width: 40px; max-height: 40px;"/>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Наш шоколад</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a id="showLoginFormButton" href="#profile">Личный кабинет</a></li>
+                        <li><a class="cart" href="cart.html"><img src="icons/basket2.png" ></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile">
+                <div class="header-burger"><span></span></div>
+                <a class="mobile-cart" href="cart.html"><img src="icons/basket2.png"></a>
+            </div>
+        </header>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Наш шоколад</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a id="showLoginFormButtonMobile" href="#profile">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <main>
+          <div class="profile-container">
+            <div class="profile-info">
+                <h3>МОИ ДАННЫЕ</h3>
+                <span class="profile-personal__name"><b><i class="fa-solid fa-person"></i> ИМЯ:</b> Максим Устинов</span>
+                <span class="profile-personal__email"><b><i class="fa-regular fa-file"></i> ПОЧТА:</b> ustinov@mail.ru</span>
+                <span class="profile-personal__number"><b><i class="fa-solid fa-mobile-retro"></i> ТЕЛЕФОН:</b> +7(999) 888-77-66</span>
+                <button class="profile-personal__change-button">ИЗМЕНИТЬ</button>
+            </div>
+            <div class="bonus-program">
+                <h3>БОНУСЫ</h3>
+                <div class="loyalty-line">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                    <span class="loyalty-count"><i class="fa-solid fa-arrow-right-long"></i> 6789₽</span>
+                </div>
+                <span class="loyalty-level"><b>Уровень:</b> сладкоежка</span>
+                <div class="promo-codes">
+                    <h4>Мои промокоды:</h4>
+                    <ul>
+                        <li>CHOCO20</li>
+                        <li>NEWYEAR24</li>
+                        <li>MYBDAY</li>
+                        <li>WINTER24</li>
+                        <li>15FIRST</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="favourite-products">
+                
+            </div>
+        </div>
+        </main>
+        <div class="for_footer">
+            <footer>
+                <div class="footer_container">
+                    <div class="sec aboutus">
+                        <h2>О нас</h2>
+                        <p>
+                            ChocShock — это уютная московская шоколадная фабрика с особым подходом к производству. Наше небольшое производство позволяет нам сохранять индивидуальность каждого шоколадного изделия. Мы гордимся тем, что можем уделить внимание каждой детали, создавая продукцию высочайшего качества.
+                        </p>
+                        <ul class="sci">
+                            <li><a id="yt" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a id="tg" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a id="tel" href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="sec quicklinks">
+                        <h2>Полезные ссылки</h2>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="catalog.html">Каталог</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec contact">
+                        <h2>Свяжитесь с нами</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fa-solid fa-map"></i></i></i></span>
+                                <span>
+                                    Мичуринский пр-т 12, к2<br>
+                                    Москва,<br>
+                                    Россия
+                                </span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-phone"></i></i></i></span>
+                                <p><a href="tel:+79624217078">+7(962)421-70-78</a></p>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-envelope"></i></i></i></span>
+                                <p><a href="mailto:chockshock@gmail.com">chockshock@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

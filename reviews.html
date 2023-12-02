@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChocShock</title>
+        <link rel="icon" type="image/png" href="icons/logo_mini.png">
+        <script src="https://kit.fontawesome.com/be9639af8e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="menu.js" defer></script>
+        <script src="reviews.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="loginForm" class="popup">
+            <div class="floating-cookies">
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco1.png"></div>
+                <div class="floating-cookie"><img src="images/choco.png"></div>
+                <div class="floating-cookie"><img src="images/choco1.png"></div>
+            </div>
+            <form class="login-form">
+                <h1>ВХОД</h1>
+                <input type="email" placeholder="Почта💌" id="email" name="email" required>
+                <input type="password" placeholder="Пароль🤫" id="password" name="password" required>
+                <a href="profile.html" id="login-button">ВОЙТИ</a>
+                <a href="profile.html" id="registration-button">Ещё нет аккаунта</a>
+            </form>
+            <button id="closeLoginFormButton">Закрыть</button>
+        </div>
+        <header>
+            <div class="center-menu">
+                <h1 id="title">ChocShock</h1>
+                <div class="logo">
+                    <img src="icons/logo.png" style="max-width: 40px; max-height: 40px;"/>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Наш шоколад</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <li><a id="showLoginFormButton" href="#profile">Личный кабинет</a></li>
+                        <li><a class="cart" href="cart.html"><img src="icons/basket2.png" ></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="mobile">
+                <div class="header-burger"><span></span></div>
+                <li><a class="mobile-cart" href="cart.html"><img src="icons/basket2.png" ></a></li>
+            </div>
+        </header>
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="catalog.html">Наш шоколад</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a id="showLoginFormButtonMobile" href="#profile">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="reviews_bg">
+                <div class="text-for-bg">
+                    <span>Отзывы</span>
+                </div>
+            </div>
+            <!-- TESTIMONIALS -->
+            <section class="testimonials">
+                <div class="container">
+                    <div id="customers-testimonials" class="owl-carousel">
+                        <div class="card">
+                            <div class="card-photo"><img src="images/catalog/strawberry_heart.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Ольга</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Заказала конфеты-сердца подруге-сладкоежке на день рождения. Она была в восторге! Однозначно рекомендую к покупке.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/catalog/new_year.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Светлана Алексеева</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Купила родным на новый год такие красивые наборчики. Всем понравились, шоколад качественный. Но с доставкой были проблемы.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/catalog/raspberry_bar.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Игорь</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Не хотелось дарить банальщину жене, поэтому заказал плитки от ChocShock. Но пришлось повозиться с оформлением.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/dark.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Мария</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Безумно вкусный и качественный шоколад. Я часто покупаю близким на праздники и всегда поражаюсь красоте.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/children.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Мария</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Мой брат был в восторге от шоколада! Он любит сладкое, поэтому оценил милые фигурки животных из шоколада.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/nicewhite.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Александра Михеева</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Как же я обожаю шоколад от ChocShock, всегда радуюсь, когда удается купить конфеты к чашечке чая.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-photo"><img src="images/hearts_big.jpg" alt=""></div>
+                            <div class="card-details">
+                                <span class="card-details__name">Евгений</span>
+                                <div class="card-details__rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p class="card-details__text">Мой абсолютный фаворит - CREAMY HEARTS. Нигде такого не пробовал, очень нежно и не приторно.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="form-container">
+                <h2 class="form-title">Оставьте свой отзыв</h2>
+                <form id="review-form" action="">
+                    <input id="review-name" type="text" placeholder="Имя">
+                    <input id="review-number" type="number" placeholder="Номер заказа">
+                    <input id="review-tel" type="tel" placeholder="Номер телефона">
+                    
+                    <label for="review-photo">
+                        Фото: 
+                        <input id="review-photo" type="file">
+                    </label>
+                    <input id="review-text" type="text" placeholder="Отзыв">
+                    <button id="review-button">Отправить</button>
+                </form>
+            </div>
+        </main>
+        <div class="for_footer">
+            <footer>
+                <div class="footer_container">
+                    <div class="sec aboutus">
+                        <h2>О нас</h2>
+                        <p>
+                            ChocShock — это уютная московская шоколадная фабрика с особым подходом к производству. Наше небольшое производство позволяет нам сохранять индивидуальность каждого шоколадного изделия. Мы гордимся тем, что можем уделить внимание каждой детали, создавая продукцию высочайшего качества.
+                        </p>
+                        <ul class="sci">
+                            <li><a id="yt" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                            <li><a id="tg" href="#"><i class="fa-brands fa-telegram"></i></a></li>
+                            <li><a id="tel" href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="sec quicklinks">
+                        <h2>Полезные ссылки</h2>
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="catalog.html">Каталог</a></li>
+                            <li><a href="reviews.html">Отзывы</a></li>
+                        </ul>
+                    </div>
+                    <div class="sec contact">
+                        <h2>Свяжитесь с нами</h2>
+                        <ul class="info">
+                            <li>
+                                <span><i class="fa-solid fa-map"></i></i></i></span>
+                                <span>
+                                    Мичуринский пр-т 12, к2<br>
+                                    Москва,<br>
+                                    Россия
+                                </span>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-phone"></i></i></i></span>
+                                <p><a href="tel:+79624217078">+7(962)421-70-78</a></p>
+                            </li>
+                            <li>
+                                <span><i class="fa-solid fa-envelope"></i></i></i></span>
+                                <p><a href="mailto:chockshock@gmail.com">chockshock@gmail.com</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+    </body>
+</html>

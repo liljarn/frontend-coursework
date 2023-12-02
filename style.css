@@ -1,0 +1,214 @@
+@import url("header.css");
+@import url("loginForm.css");
+@import url("footer.css");
+@import url("reviews.css");
+@import url("catalog.css");
+@import url("profile.css");
+@import url("cart.css");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+:root {
+    --main-color: rgb(184, 166, 155);
+    --form-color: rgba(184, 166, 155, 0.7);
+    /* --main-color: #7E5BBA;
+    --second-color: #A04BFA; */
+    --third-color: rgb(187, 159, 132);
+    --index: 1vw + 1vh;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;;
+    margin: 0;
+    width: 100%;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    margin-top: 5vh;
+}
+
+.bg {
+    position: relative;
+    background-image: url("images/background.jpg");
+    height: 100vh; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text-for-bg {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 50%;
+    top: 50%;
+    text-shadow: 0 0 10px black;
+    color: white;
+    font-size: calc(5*var(--index) + 20px);
+    text-align: center;
+    padding: 20px; /* Добавим отступы для рамки */
+    border: 2px solid transparent; /* Установим начальный невидимый бордер */
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.5); /* Полупрозрачная рамка */
+    backdrop-filter: blur(5px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -30%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.to-catalog {
+    background: transparent;
+    border: 2px solid white;
+}
+
+
+@media (max-width: 426px) {
+    .bg {
+        background-position: 70%;
+    }
+}
+
+
+.little-description {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.text {
+    margin: 30px 30px 0px;
+    flex: 1;
+}
+
+.text h1 {
+    width: fit-content;
+    padding: 5px 20px;
+    font-size: calc(20px + 1.5vw);
+}
+
+.text p {
+    font-size: calc(16px + 0.5vw);
+    text-align:justify;
+    margin: 20px;
+}
+
+.image {
+    position: relative;
+    margin: 20px;
+}
+
+.image img {
+    width: calc(200px + 30vw);
+}
+
+button {
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    background-color: var(--main-color);
+    font-family: 'Comfortaa', sans-serif;
+    font-size: calc(12px + 0.2vw);
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 990px) {
+    .little-description {
+        flex-flow: column;
+    }
+    .text {
+        margin: 5px;
+    }
+    .image {
+        margin: 0;
+    }
+}
+
+/* about us */
+
+.head-title {
+    margin: 20px 5vw;
+    border-radius: 10px;
+    font-size: 9vw;
+    font-weight: 700;
+    text-align: center;
+    background: var(--main-color);
+    color: white;
+}
+
+.head-title__1 {
+    top: 10vw;
+}
+
+.head-title__2 {
+    top: 17vw;
+}
+
+.head-title__3 {
+    top: 24vw;
+}
+
+.head-title__4 {
+    top: 31vw;
+}
+
+.gallery {
+    display: flex;
+}
+
+.gallery > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-item {
+    width: 40vw;
+}
+
+.left-column > * {
+    margin-bottom: 5vw;
+}
+
+.right-column > * {
+    margin-bottom: 5vw;
+}
+
+
+
+.text-block__title {
+    font-size: calc(16px + 0.8vw);
+}
+
+.text-block__p {
+    font-size: calc(12px + 0.5vw);
+    text-align: justify;
+}
+
+@media (max-width: 769px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery-item {
+        width: 80%;
+    }
+    .right-column {
+        margin-top: 0px;
+    }
+}
