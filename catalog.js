@@ -75,7 +75,7 @@ function loadProducts(products) {
       <div class="img-container">
         <button class="like-button"><i class="heart fa-regular fa-heart"></i></button>
         <div class="choco_type__price">${product.price}₽</div>
-        <img src="${product.imageUrl}" alt="${product.name}">
+        <img class="choco_type__image" src="${product.imageUrl}" alt="${product.name}">
       </div>
       <div class="choco_type_text">
         <p class="choco_type_text__name"><b>${product.name}</b></p>
@@ -106,7 +106,7 @@ const priceInputMin = document.querySelector(".min-input");
 const priceInputMax = document.querySelector(".max-input");
 const minToolTip = document.querySelector(".min-tooltip");
 const maxToolTip = document.querySelector(".max-tooltip");
-const minGap = 50;
+const minGap = 0;
 const range = document.querySelector(".slider-track");
 const sliderMinValue = parseInt(minVal.min);
 const sliderMaxValue = parseInt(maxVal.max);
@@ -121,10 +121,10 @@ window.onload = function() {
 
 function slideMin() {
   let gap = parseInt(maxVal.value) - parseInt(minVal.value);
-  if (gap <= minGap) {
+  if (gap < minGap) {
     minVal.value = parseInt(maxVal.value) - minGap;
   } 
-  minToolTip.innerHTML = minVal.value + "₽";
+  minToolTip.innerHTML = "₽" + minVal.value;
   priceInputMin.value = minVal.value;
   setArea();
   filter();
@@ -135,7 +135,7 @@ function slideMax() {
   if (gap < minGap) {
     maxVal.value = parseInt(minVal.value) + minGap;
   } 
-  maxToolTip.innerHTML = maxVal.value + "₽";
+  maxToolTip.innerHTML = "₽" + maxVal.value;
   priceInputMax.value = maxVal.value;
   setArea();
   filter();
@@ -270,7 +270,7 @@ function setTouchListenersToCards() {
 
   cards.forEach(card => {
     var isTouched = false;
-    const imgContainer = card.querySelector('.img-container');
+    const imgContainer = card.querySelector('.img-container .choco_type__image');
     const textBlock = card.querySelector('.choco_type_text');
     const textInfoBlock = card.querySelector('.choco_type_text__info');
 
