@@ -36,7 +36,6 @@ function parseJson() {
                 );
             }
             localStorage.setItem('productDatabase', JSON.stringify(productDatabase));
-            
             console.log(productDatabase);
             loadProducts(productDatabase);
             setEventListenersToButtons();
@@ -51,14 +50,6 @@ if (localStorage.getItem('favourites') == null) {
 } else {
   favouriteProducts = JSON.parse(localStorage.getItem('favourites'));
 }
-
-// let chocolateProducts;
-// if (localStorage.getItem('chocolates') == null) {
-//   favouriteProducts = [];
-//   localStorage.setItem('chocolates', JSON.stringify(productDatabase));
-// } else {
-//   favouriteProducts = JSON.parse(localStorage.getItem('chocolates'));
-// }
 
 function loadProducts(products) {
   const catalogContainer = document.querySelector(".shop");
@@ -118,7 +109,6 @@ window.onload = function() {
   slideMin();
   slideMax();
 };
-
 function slideMin() {
   let gap = parseInt(maxVal.value) - parseInt(minVal.value);
   if (gap < minGap) {
@@ -129,7 +119,6 @@ function slideMin() {
   setArea();
   filter();
 };
-
 function slideMax() {
   let gap = parseInt(maxVal.value) - parseInt(minVal.value);
   if (gap < minGap) {
@@ -140,7 +129,6 @@ function slideMax() {
   setArea();
   filter();
 };
-
 function setArea() {
   range.style.left = (minVal.value / sliderMaxValue) * 100 + "%";
   minToolTip.style.left = (minVal.value / sliderMaxValue) * 100 + "%";
@@ -181,18 +169,15 @@ function setEventListenersToButtons() {
     const moreButton = button.querySelector(".more-button");
     const lessButton = button.querySelector(".less-button");
     const countSpan = button.querySelector(".count");
-
     const productId = button.id;
     const selectedProduct = productDatabase.find(product => product.id === productId);
     let isInCart = cart.products.some(product => product.id === productId);
-
     if (isInCart) {
       buyButton.style.visibility = "hidden";
       addMoreContainer.style.visibility = "visible";
       count = cart.products.find(product => product.id === productId).quantity;
       countSpan.textContent = count;
     }
-
     buyButton.addEventListener("click", function() {
       console.log('click');
       buyButton.style.visibility = "hidden";
@@ -200,20 +185,16 @@ function setEventListenersToButtons() {
       cart.addProduct(selectedProduct);
       count++;
       countSpan.textContent = count;
-
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCounter();
     })
-
     moreButton.addEventListener("click", function(){
       cart.addProduct(selectedProduct);
       count++;
       countSpan.textContent = count;
-
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCounter();
     })
-
     lessButton.addEventListener("click", function(){
       cart.removeProduct(selectedProduct);
       count--;
@@ -222,11 +203,9 @@ function setEventListenersToButtons() {
         addMoreContainer.style.visibility = "hidden";
       }
       countSpan.textContent = count;
-
       localStorage.setItem('cart', JSON.stringify(cart));
       updateCartCounter();
     })
-
     minPriceInput.addEventListener("input", filter);
     maxPriceInput.addEventListener("input", filter);
   });
@@ -237,15 +216,12 @@ let currentProducts = productDatabase;
 function filter() {
   const minPrice = parseFloat(document.getElementById("minPriceInput").value) || 0;
   const maxPrice = parseFloat(document.getElementById("maxPriceInput").value) || Infinity;
-
   currentProducts = productDatabase.filter(product => {
     const productPrice = parseFloat(product.price.replace(/[₽]/g, ''));
     return productPrice >= minPrice && productPrice <= maxPrice;
   });
-
   const sortSelect = document.getElementById("sortSelect");
   const selectedOption = sortSelect.value;
-
   if (selectedOption === "ascending") {
     currentProducts.sort((a, b) => parseInt(a.price) - parseInt(b.price));
   } else if (selectedOption === "descending") {
@@ -378,7 +354,6 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 
  window.addEventListener('beforeunload', function() {
-   //localStorage.setItem('cart', JSON.stringify(cart)); // записываем в локальное хранилище данные из временного объекта
    localStorage.setItem('favourites', JSON.stringify(favouriteProducts));
  });
 

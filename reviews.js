@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
   $('.owl-carousel').owlCarousel({
     loop: true,
     center: true,
-    autoWidth: true, // Отключите автоматическую ширину элементов
+    autoWidth: true,
     autoplay: true,
     dots: true,
     nav: true,
